@@ -1,0 +1,215 @@
+
+*{
+   
+}
+
+ 
+body{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    vertical-align: auto;
+    transform: translateY(-2%);
+   
+}
+.watermark {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1111;
+    opacity: 0.15;
+    background: url('/images/nacoslogo.png') no-repeat center center;
+    background-size: contain;
+    width: 70%;
+    height: 70%;
+    pointer-events: none; /* Ensure it doesn't interfere with interaction */
+  }
+.statement-section {
+    width: 96%;
+    margin: 20px auto;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.statement-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.statement-header h2 {
+    color: black !important;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5px;
+}
+
+.statement-header h3 {
+    color: black !important;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-left, .logo-right {
+    width: 100px;
+    height: auto;
+}
+
+/* Account Details */
+.account-details {
+    background: #f1f1f1;
+    padding: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1;
+    flex-direction: row;
+    gap: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.account-details p {
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black !important;
+    margin: 5px 0;
+}
+
+/* Statement Table */
+#statement-content table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    
+}
+
+#statement-content th,
+#statement-content td {
+    padding: 10px;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+ border-bottom: 1px solid #ddd;
+}
+
+#statement-content th {
+    background: green;
+    color: white;
+    font-weight: bold;
+}
+
+#statement-content tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.total-row {
+    font-weight: bold;
+    background: #f1f1f1;
+    text-align: right;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .statement-header {
+        flex-direction: column;
+    }
+    
+    .logo-left, .logo-right {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    #statement-content th, #statement-content td {
+        font-size: 5px;
+        padding: 10px;
+    }
+}
+.trans{
+   text-align: right;
+   font-size: 10px;
+   font-family: bold;
+}
+#go-back{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 111;
+    border-radius: 10px;
+}
+#go-back:hover{
+    opacity: 0.4;
+}
+#here{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;  
+}
+.qrcode-container img{
+    width: 100px;
+    display: flex;
+   
+}
+.qrcode-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: -10px;
+}
+.clearance-footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .inner-text p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+  .contact-info li {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+  
+  .contact-info i {
+    color: green;
+    margin-right: 10px;
+    
+  }
+  
+  .contact-info a {
+    color:green;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  

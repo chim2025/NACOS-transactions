@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Association Financial System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+ 
+<body>
+    <img src="images/clu_logo.png" alt="Logo" class="fixed-logo" />
+  <div class="dashboard-container">
+    
+    <aside class="sidebar">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <h2>Gtransact</h2>
+      </div>
+      <ul>
+        <li data-section="home" class="active"><i class="icon">🏠</i> <span>Home</span></li>
+        <li data-section="digital-receipt"><i class="icon">🧾</i> <span>New Transaction</span></li>
+        <li data-section="payments"><i class="icon">💳</i> <span>Transaction Summary</span></li>
+        <li data-section="expenditure"><i class="icon">📊</i> <span>Expenditure</span></li>
+        <li data-section="membership"><i class="icon">🪪</i> <span>Membership Cards</span></li>
+        <li><i class="icon">🚪</i> <span>Sign Out</span></li>
+      </ul>
+    </aside>
+
+    
+    <main class="main-content">
+     
+      <div id="home" class="content-section active">
+        <div class="home-container">
+          <h1><b id="description"></b>, Director of Finance!</h1>
+          <div class="date-time">
+            <div id="daty" class="icon">📅</div>
+            <span id="current-date"></span>
+          </div>
+          <div class="statistics">
+            <div class="card">
+              <div class="icon">👩‍🎓</div>
+              <h2>Total Registered Students</h2>
+              <span id="total-students">-</span>
+              <p id="level">Year One:  <b>- </b> Year Two:  <b>- </b>  Year Three:  <b>- </b>  Year Four:  <b>- </b></p>
+            </div>
+            <div class="card">
+              <div class="icon">✔️</div>
+              <h2>Students Paid This Semester</h2>
+              <span id="students-paid">-</span>
+            </div>
+          </div>
+        </div>
+        <div class="transaction-summary">
+          <div class="summary-item">
+            <h3>Total Transactions Today</h3>
+            <p id="today-transactions">0</p>
+          </div>
+          <div class="summary-item">
+            <h3>Total Transactions This Week</h3>
+            <p id="week-transactions">0</p>
+          </div>
+          <div class="summary-item">
+            <h3>Total Transactions This Month</h3>
+            <p id="month-transactions">0</p>
+          </div>
+        </div>
+        
+        <div>
+        <h2> Recent Activity</h2>
+        </div>
+        <div id="transactions-list"></div>
+      </div>
+
+     
+      <div id="digital-receipt" class="content-section">
+        <div class="receipt-forms" id="receipt-forms">
+         
+      </div>
+      
+      <div id="success" class="hidden success">
+        <div>
+          <button id="go-back1" class="go-back">Go Back</button>
+          </div>
+
+        <h1 id="heading"> Transaction success</h1>
+        <img src="images/verified.gif">
+        <p id="paragraph"></p>
+        <button id="rep">Generate a receipt</button>
+      </div>
+     
+
+      
+        <div class="receipt-container" id="receipt-container">
+            <h1>Start a new Transaction</h1>
+            <p><p>
+              Quickly and securely complete a transaction with ease! Our intuitive platform ensures
+               a seamless experience, whether you're making a payment for a member, transferring funds, or
+                managing member account. Enjoy peace of mind with robust security features, lightning-fast processing, and 24/7
+                 support designed to keep your transactions hassle-free.
+          </p>
+            </p>
+
+            <button class="receipt-btn" id="startBtn">Start Now</button>
+          </div>
+          
+          
+         
+          <div class="modal" id="myModal">
+            <div class="modal-content">
+             
+              <span class="close-btn" id="closeModal">&times;</span>
+        
+              <h2>Enter User Registration Number</h2>
+              <input type="text" id="regNumber" placeholder="NACOS ID" />
+               <div class="modal-text">Please input user NACOS ID number to proceed with the process.</div>
+              
+             
+              <button class="submit-btn" id="submitBtn">Verify User</button>
+            </div>
+            
+     
+      </div>
+    
+      </div>
+
+      <div id="payments" class="content-section">
+        <div id="transaction-summary">
+          
+          <h2>Summary of Transactions</h2>
+
+          <div id="summary-details">
+            <div class="box-container">
+              <i class="icon fa fa-chart-bar"></i>
+              <p id="total">Total Transactions:</p>
+              <p id="total-transactions"> <span>0</span></p>
+            </div>
+            <div class="box-container">
+              <i class="icon fa fa-wallet"></i>
+            <p id="payment-type-summary">Transactions by Payment Purpose:</p>
+            <ul id="payment-types"></ul>
+            </div>
+            <div class="box-container">
+              <i class="icon fa fa-users"></i>
+              <p id="level-summary">Transactions by Level:</p>
+            <ul id="levels"></ul>
+            </div>
+            <div class="box-container">
+              <i class="icon fa fa-exclamation-triangle"></i>
+              <p id="unspecified-level">Unspecified Level Transactions: <span>0</span></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="all">
+        <div class="filtration">
+        <h4> Filter Member Transactions</h4>
+        <select id="filter-dropdown">
+          <option value="today">Today</option>
+          <option value="week">This Week</option>
+          <option value="month">This Month</option>
+          <option value="semester">This Semester</option>
+        </select>
+        </div>
+      
+     
+        <div id="summary">
+          <h3>Summary</h3>
+          <p>Total Transactions: <span id="total-transactions">-</span></p>
+          <p>Total Amount: <span id="total-amount">₦0.00</span></p>
+        </div>
+      
+    
+        <div id="filtered-tables">
+         
+        </div>
+        <div class="space"></div>
+        </div>
+          
+      </div>
+      
+
+      <div id="expenditure" class="content-section">
+        <h1>Expenditure</h1>
+        <p>Coming soon.</p>
+      </div>
+
+      <div id="membership" class="content-section">
+        <h1>Membership Cards</h1>
+        <p>Services</p>
+        <div class="services">
+          <div class="each-card" id="debit">
+            <i class="fas fa-wallet"></i>
+            <h4>G-Debit</h4>
+          </div>
+          <div class="each-card " id="account-statement">
+            <i class="fas fa-file-alt"></i>
+            <h4>Account Statement</h4>
+          </div>
+          <div class="each-card " id="track-payments">
+            <i class="fas fa-credit-card"></i>
+            <h4>Track Payments</h4>
+          </div>
+          <div class="each-card">
+            <i class="fas fa-gift"></i>
+            <h4>Gifts & Donations</h4>
+          </div>
+        </div>
+        <div class="show-input hidden">
+          <h2>Enter User Registration Number</h2>
+          <div style="display: flex; margin-bottom: 15px;">
+            <input type="text" id="regNumber1" placeholder="NACOS ID" />
+            <button class="submit-btn" id="continue">Continue</button>
+          </div>
+          <div class="modal-text">Please input user NACOS ID number to proceed with the process.</div>
+        </div>
+        
+
+        
+      </div>
+      
+    </main>
+  </div>
+  <div id="payment-overlay">
+    <h1 id="animated-heading">G<span id="tran">tran</span><span id="sact">sact</span></h1>
+    <div class="spinner"></div>
+    <p id="loading">Loading, Please Wait...</p>
+  </div>
+  <div id="payment-overlays">
+    
+    <div class="spinner"></div>
+    <p id="processing">Processing member transaction</p>
+  </div>
+  <div id="payment-overlayss">
+    
+    <div class="spinner"></div>
+    <p id="processing">Fetching Member Details</p>
+  </div>
+  <div id="payment-overlaysss">
+    
+    <div class="spinner"></div>
+    <p id="processing">Getting Transactions Ready...</p>
+  </div>
+  <div id="overlay">
+    <div class="horizontal-spinner"></div>
+  </div>
+  
+  
+
+  
+  <script src="script.js"></script>
+  <script type="module" src="receipts.js"></script>
+  <script type="module" src="submit.js"></script>
+  <script type="module" src="recent.js"></script>
+  <script type="module" src="auto.js"></script>
+  <script type="module" src="student.js"></script>
+  <script type="module" src="count.js"></script>
+  <script  src="generate.js"></script>
+  <script  src="load.js"></script>
+  <script  src="search.js"></script>
+  <script  src="services.js"></script>
+  <script type="module" src="transactions.js"></script>
+  <script type="module" src="summary.js"></script>
+  <script type="module" src="statementtoggle.js"></script>
+</body>
+</html>
