@@ -3,13 +3,13 @@ import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.1.0
 
 // Firebase Configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC74WtElLwIhx4dG4JBcZxkax-bvxJ6M_I",
-  authDomain: "nacos-1b5ce.firebaseapp.com",
-  databaseURL: "https://nacos-1b5ce-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "nacos-1b5ce",
-  storageBucket: "nacos-1b5ce.appspot.com",
-  messagingSenderId: "840396345399",
-  appId: "1:840396345399:web:a2b86e7ceb1994902c6fb2",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
 };
 
 
